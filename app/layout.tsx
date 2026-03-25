@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.png",       // for most browsers
-    apple: "/favicon.png",      // for iOS when added to home screen
+    icon: "/public/favicon.png",       // for most browsers
+    apple: "/public/favicon.png",      // for iOS when added to home screen
   },
 };
 
