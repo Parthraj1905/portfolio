@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Your Name — Data Scientist & ML Engineer",
+  title: "Parth — Data Enthusiastic",
   description:
     "Portfolio of a Data Scientist and ML Engineer passionate about building intelligent systems.",
   keywords: ["data science", "machine learning", "AI", "portfolio", "deep learning"],
