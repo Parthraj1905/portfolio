@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     "Portfolio of a Data Scientist and ML Engineer passionate about building intelligent systems.",
   keywords: ["data science", "machine learning", "AI", "portfolio", "deep learning"],
   openGraph: {
-    title: "Your Name — Data Scientist & ML Engineer",
+    title: "Parth — Data Enthusiastic",
     description:
       "Portfolio of a Data Scientist and ML Engineer passionate about building intelligent systems.",
     type: "website",
   },
   icons: {
-    icon: "/public/favicon.png",       // for most browsers
-    apple: "/public/favicon.png",      // for iOS when added to home screen
+    icon: "favicon.png",       // for most browsers
+    apple: "favicon.png",      // for iOS when added to home screen
   },
 };
 
