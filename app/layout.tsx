@@ -12,6 +12,10 @@ export const metadata: Metadata = {
       "Portfolio of a Data Scientist and ML Engineer passionate about building intelligent systems.",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.png",       // for most browsers
+    apple: "/favicon.png",      // for iOS when added to home screen
+  },
 };
 
 export default function RootLayout({
