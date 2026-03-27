@@ -15,7 +15,7 @@ export const skillCategories: SkillCategory[] = [
     icon: "code",
     skills: [
       { name: "Python", level: "proficient" },
-      { name: "SQL", level: "comfortable" },
+      { name: "SQL", level: "proficient" },
       { name: "R", level: "learning" },
     ],
   },
@@ -23,7 +23,7 @@ export const skillCategories: SkillCategory[] = [
     category: "Data & ML",
     icon: "brain",
     skills: [
-      { name: "Pandas", level: "comfortable" },
+      { name: "Pandas", level: "proficient" },
       { name: "NumPy", level: "comfortable" },
       { name: "Scikit-learn", level: "comfortable" },
       { name: "PyTorch", level: "learning" },
@@ -43,10 +43,10 @@ export const skillCategories: SkillCategory[] = [
     category: "Tools & Infra",
     icon: "tools",
     skills: [
-      { name: "Jupyter", level: "comfortable" },
+      { name: "Tableau", level: "comfortable" },
       { name: "Git", level: "comfortable" },
+      { name: "Azure", level: "learning" },
       { name: "Docker", level: "learning" },
-      { name: "Linux", level: "comfortable" },
     ],
   },
 ];

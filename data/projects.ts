@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "An end-to-end data web application built from scratch and deployed on Vercel. Focused on clean data presentation, real-time updates, and an intuitive UI for exploring market trends.",
       tags: ["Next.js", "Data Visualisation", "Vercel", "Real-time Data"],
       status: "completed",
-      githubUrl: "",        // add your GitHub repo link if public
+      githubUrl: "https://github.com/Parthraj1905/data-nerd",        // add your GitHub repo link if public
       demoUrl: "https://data-nerd.vercel.app/",
       highlights: [
       "Fetches and displays live market data",
@@ -32,9 +32,9 @@ export const projects: Project[] = [
   {
     id: "project-2",
     title: "Coming Soon",
-    description: "Your second ML project will live here.",
+    description: "Future project will live here.",
     longDescription:
-      "Deep learning, NLP, computer vision — whatever excites you most. This slot is waiting.",
+      "Building something Using Deep learning, NLP, computer vision.",
     tags: ["PyTorch", "Deep Learning"],
     status: "planned",
     highlights: [

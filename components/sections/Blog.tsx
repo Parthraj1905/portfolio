@@ -6,22 +6,22 @@ import { useRef } from "react";
 
 const placeholderPosts = [
   {
-    title: "My First Steps into Machine Learning",
-    excerpt: "How I went from zero to training my first model — what worked, what didn't, and what I learned.",
+    title: "My First Steps into Data.",
+    excerpt: "How I went from zero to Data Expert — what worked, what didn't, and what I learned.",
     date: "Coming soon",
     tag: "Beginner",
     readTime: "5 min read",
   },
   {
-    title: "Understanding Gradient Descent",
-    excerpt: "A visual, intuitive explanation of one of the most fundamental concepts in ML.",
+    title: "Understanding Machine Learning",
+    excerpt: "A visual, intuitive explanation of one of the most fundamental concepts.",
     date: "Coming soon",
     tag: "Theory",
     readTime: "8 min read",
   },
   {
     title: "My First Kaggle Competition",
-    excerpt: "I entered my first competition without expecting to win — here's what the process taught me.",
+    excerpt: "I entered my first competition — here's what the process taught me.",
     date: "Coming soon",
     tag: "Experience",
     readTime: "6 min read",
