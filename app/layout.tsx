@@ -13,7 +13,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/Users/parthrajsinh/Developer/portfolio/favicon.png"       // for most browsers
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
