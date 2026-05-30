@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Terminal, GitBranch, ShieldCheck } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "Logs", href: "#blog" },
+  { label: "REST Client", href: "#contact" }
 ];
 
 export default function Navbar() {
@@ -28,23 +29,36 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#1f1f1f]"
+          ? "bg-[#030303]/90 backdrop-blur-md border-b border-[#1e293b]"
           : "bg-transparent"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="font-mono text-sm text-[#6366f1] tracking-wider hover:opacity-80 transition-opacity">
-          Parmar Parthrajsinh
+        {/* Brand/Logo */}
+        <a href="#" className="flex items-center gap-2 font-mono text-sm tracking-wider text-slate-100 hover:text-[#10b981] transition-colors">
+          <Terminal size={16} className="text-[#10b981]" />
+          <span>parthrajsinh@dev:~</span>
         </a>
 
+        {/* Git & API Indicators (Desktop) */}
+        <div className="hidden lg:flex items-center gap-4 text-xs font-mono text-slate-400">
+          <div className="flex items-center gap-1.5 px-2 py-0.5 bg-[#0e0e11] border border-[#1e293b] rounded">
+            <GitBranch size={12} className="text-[#10b981]" />
+            <span>main</span>
+          </div>
+          <div className="flex items-center gap-1.5 px-2 py-0.5 bg-[#0e0e11] border border-[#1e293b] rounded">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse" />
+            <span>API: 200 OK</span>
+          </div>
+        </div>
+
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-[#a3a3a3] hover:text-[#e5e5e5] transition-colors duration-200 font-sans tracking-wide"
+                className="text-xs font-mono text-slate-400 hover:text-slate-100 transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -55,14 +69,15 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 text-sm font-mono px-4 py-2 border border-[#6366f1]/40 text-[#6366f1] rounded-md hover:bg-[#6366f1]/10 transition-all duration-200"
+          className="hidden md:inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 border border-[#10b981]/40 text-[#10b981] rounded bg-[#10b981]/5 hover:bg-[#10b981]/15 transition-all duration-200"
         >
-          Let's talk
+          <ShieldCheck size={14} />
+          <span>Connect API</span>
         </a>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-[#a3a3a3] hover:text-[#e5e5e5] transition-colors"
+          className="md:hidden text-slate-400 hover:text-slate-100 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -81,20 +96,30 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-md border-b border-[#1f1f1f]"
+            className="md:hidden bg-[#030303]/95 backdrop-blur-md border-b border-[#1e293b]"
           >
             <ul className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-[#a3a3a3] hover:text-[#e5e5e5] transition-colors"
+                    className="text-sm font-mono text-slate-400 hover:text-slate-100 transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
+              <li className="flex items-center gap-4 pt-2 border-t border-[#1e293b] text-xs font-mono text-slate-400">
+                <div className="flex items-center gap-1.5">
+                  <GitBranch size={12} className="text-[#10b981]" />
+                  <span>main</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse" />
+                  <span>API: 200 OK</span>
+                </div>
+              </li>
             </ul>
           </motion.div>
         )}

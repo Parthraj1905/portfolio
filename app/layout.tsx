@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Parth — Data Enthusiastic",
+  title: "Parthrajsinh — Python Backend Engineer",
   description:
-    "Portfolio of a Data Scientist and ML Engineer passionate about building intelligent systems.",
-  keywords: ["data science", "machine learning", "AI", "portfolio", "deep learning"],
+    "Architecting scalable backend services, optimizing relational databases, and designing high-performance REST APIs.",
+  keywords: ["Python", "FastAPI", "Backend Developer", "PostgreSQL", "Database Optimization", "API Design", "Supabase", "Razorpay Integration", "Docker"],
   openGraph: {
-    title: "Parth — Data Enthusiastic",
+    title: "Parthrajsinh — Python Backend Engineer",
     description:
-      "Portfolio of a Data Scientist and ML Engineer passionate about building intelligent systems.",
+      "Architecting scalable backend services, optimizing relational databases, and designing high-performance REST APIs.",
     type: "website",
   },
   icons: {

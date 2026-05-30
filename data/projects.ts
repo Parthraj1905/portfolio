@@ -7,40 +7,54 @@ export type Project = {
   status: "completed" | "in-progress" | "planned";
   githubUrl?: string;
   demoUrl?: string;
-  notebookUrl?: string;
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
   highlights: string[];
 };
 
 export const projects: Project[] = [
-    {
-      id: "data-nerd",
-      title: "Data Nerd — Market Insights",
-      description:
-      "A live market insights dashboard that aggregates and visualises financial data in real time. Built to make market data approachable and readable.",
-      longDescription:
-      "An end-to-end data web application built from scratch and deployed on Vercel. Focused on clean data presentation, real-time updates, and an intuitive UI for exploring market trends.",
-      tags: ["Next.js", "Data Visualisation", "Vercel", "Real-time Data"],
-      status: "completed",
-      githubUrl: "https://github.com/Parthraj1905/data-nerd",        // add your GitHub repo link if public
-      demoUrl: "https://data-nerd.vercel.app/",
-      highlights: [
-      "Fetches and displays live market data",
-      "Built and deployed end-to-end independently",
-      "Focused on clean, readable data presentation",
-      ],
-    },
   {
-    id: "project-2",
-    title: "Coming Soon",
-    description: "Future project will live here.",
+    id: "data-nerd",
+    title: "DataNerd — Aggregation Engine",
+    description:
+      "Engineered high-performance FastAPI REST endpoints to serve aggregations against a 670,000+ record PostgreSQL database. Reduced query latency by 850ms using indexed filtering and optimized SQL views. Implemented backend time-series calculations for dynamic client consumption.",
     longDescription:
-      "Building something Using Deep learning, NLP, computer vision.",
-    tags: ["PyTorch", "Deep Learning"],
-    status: "planned",
-    highlights: [
-      "Architecture design",
-      "Training pipeline",
-      "Results & insights",
+      "A high-density data aggregation API built for sub-second responses. Focused on Postgres indexing strategy, partition tuning, and SQL view optimization.",
+    tags: ["FastAPI", "PostgreSQL", "Python", "SQL Optimization", "Time-Series"],
+    status: "completed",
+    githubUrl: "https://github.com/Parthraj1905/data-nerd",
+    metrics: [
+      { label: "Query Latency Delta", value: "-850ms" },
+      { label: "Database Records", value: "670K+" },
+      { label: "Response Throughput", value: "1.2k req/s" }
     ],
+    highlights: [
+      "Reduced query latency by 850ms using indexed filtering and optimized SQL views",
+      "Engineered FastAPI REST endpoints serving aggregations against a 670,000+ record PostgreSQL database",
+      "Implemented backend time-series calculations for dynamic client consumption"
+    ]
   },
+  {
+    id: "parikshai",
+    title: "Parikshai — Service Orchestration & Core Backend",
+    description:
+      "Architected stateful Python backend services supporting 200 concurrent users. Implemented JWT-based authentication and real-time database sync via Supabase. Orchestrated complex third-party integrations including Gemini API for content generation and Razorpay for multi-tier subscription billing routing.",
+    longDescription:
+      "Core stateful backend service handling user authentication session caches, real-time sync, and external payment subscription billing loops.",
+    tags: ["Python", "Supabase", "Gemini API", "Razorpay Integration", "JWT Auth"],
+    status: "completed",
+    githubUrl: "https://github.com/Parthraj1905/parikshai",
+    metrics: [
+      { label: "Concurrent Sessions", value: "200 Active" },
+      { label: "API Sync Frequency", value: "Real-time" },
+      { label: "Payment Webhooks Latency", value: "<150ms" }
+    ],
+    highlights: [
+      "Architected stateful Python backend services supporting 200 concurrent users",
+      "Implemented secure JWT-based authentication and real-time database sync via Supabase",
+      "Orchestrated complex integrations including Gemini API content generation and Razorpay subscription routing"
+    ]
+  }
 ];

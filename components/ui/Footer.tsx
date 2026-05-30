@@ -1,17 +1,19 @@
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-[#1f1f1f] py-8 px-6">
+    <footer className="border-t border-[#1e293b] py-8 px-6 bg-[#030303] text-xs font-mono text-slate-500">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-[#525252] text-sm font-mono">
-          © {year} Parmar Parthrajsinh. Built with Next.js & Framer Motion.
+        <p className="flex items-center gap-1.5">
+          <span>© {year} parthrajsinh.</span>
+          <span className="text-[#10b981]">::</span>
+          <span>compiled_successfully_with_nextjs</span>
         </p>
         <div className="flex items-center gap-6">
           <a
             href="https://github.com/Parthraj1905"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#525252] hover:text-[#6366f1] text-sm transition-colors"
+            className="hover:text-[#10b981] transition-colors"
           >
             GitHub
           </a>
@@ -19,7 +21,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/parthrajsinh-parmar-a86463373/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#525252] hover:text-[#6366f1] text-sm transition-colors"
+            className="hover:text-[#10b981] transition-colors"
           >
             LinkedIn
           </a>
@@ -27,7 +29,7 @@ export default function Footer() {
             href="https://www.kaggle.com/parthrajsinhparmar"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#525252] hover:text-[#6366f1] text-sm transition-colors"
+            className="hover:text-[#10b981] transition-colors"
           >
             Kaggle
           </a>
