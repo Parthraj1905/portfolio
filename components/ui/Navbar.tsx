@@ -27,11 +27,10 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-[#030303]/90 backdrop-blur-md border-b border-[#1e293b]"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Brand/Logo */}
@@ -72,7 +71,7 @@ export default function Navbar() {
           className="hidden md:inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 border border-[#10b981]/40 text-[#10b981] rounded bg-[#10b981]/5 hover:bg-[#10b981]/15 transition-all duration-200"
         >
           <ShieldCheck size={14} />
-          <span>Connect API</span>
+          <span>Connect</span>
         </a>
 
         {/* Mobile Menu Button */}

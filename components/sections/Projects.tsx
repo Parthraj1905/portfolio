@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { projects } from "@/data/projects";
-import { Server, Terminal, Database, Activity, GitBranch } from "lucide-react";
+import { Server, Terminal, Database, Activity, GitBranch, Link } from "lucide-react";
 
 const statusConfig = {
   completed: "text-emerald-400 border-emerald-500/20 bg-emerald-500/5",
@@ -78,9 +78,8 @@ export default function Projects() {
               {/* API Route visual (high density backend detail) */}
               <div className="bg-slate-950 rounded border border-[#1e293b] px-3.5 py-2 flex items-center justify-between font-mono text-[11px]">
                 <div className="flex items-center gap-2">
-                  <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${
-                    project.id === "data-nerd" ? "bg-sky-500/10 text-sky-400 border border-sky-500/20" : "bg-amber-500/10 text-amber-400 border border-amber-500/20"
-                  }`}>
+                  <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${project.id === "data-nerd" ? "bg-sky-500/10 text-sky-400 border border-sky-500/20" : "bg-amber-500/10 text-amber-400 border border-amber-500/20"
+                    }`}>
                     {project.id === "data-nerd" ? "GET" : "POST"}
                   </span>
                   <span className="text-slate-400">
@@ -137,6 +136,19 @@ export default function Projects() {
 
               {/* Actions */}
               <div className="flex gap-4 text-xs font-mono pt-1">
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#10b981] hover:underline flex items-center gap-1.5"
+                  >
+                    <Link size={12} />
+                    <span>live deployment →</span>
+                  </a>
+                )}
+                <hr />
+
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}

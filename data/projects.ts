@@ -24,6 +24,7 @@ export const projects: Project[] = [
       "A high-density data aggregation API built for sub-second responses. Focused on Postgres indexing strategy, partition tuning, and SQL view optimization.",
     tags: ["FastAPI", "PostgreSQL", "Python", "SQL Optimization", "Time-Series"],
     status: "completed",
+    demoUrl: "https://data-nerd.vercel.app/",
     githubUrl: "https://github.com/Parthraj1905/data-nerd",
     metrics: [
       { label: "Query Latency Delta", value: "-850ms" },
@@ -45,6 +46,7 @@ export const projects: Project[] = [
       "Core stateful backend service handling user authentication session caches, real-time sync, and external payment subscription billing loops.",
     tags: ["Python", "Supabase", "Gemini API", "Razorpay Integration", "JWT Auth"],
     status: "completed",
+    demoUrl: "https://parikshai.vercel.app/",
     githubUrl: "https://github.com/Parthraj1905/parikshai",
     metrics: [
       { label: "Concurrent Sessions", value: "200 Active" },
